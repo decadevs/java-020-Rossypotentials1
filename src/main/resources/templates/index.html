@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Management System</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+          crossorigin="anonymous">
+    <style>
+
+        body {
+            background-color: #f8f9fa;
+            padding-top: 60px;
+        }
+        .jumbotron {
+            background-image: url('/Users/mac/Downloads/employeeMS/src/main/resources/static/backgroundImageForEMS.jpg');
+            background-size: cover;
+            color: black;
+            text-align: center;
+            padding: 100px 0;
+        }
+        .navbar {
+            background-color: #343a40 !important;
+        }
+        .navbar-brand {
+            color: #ffffff !important;
+        }
+        .navbar-dark .navbar-nav .nav-link {
+            color: #ffffff !important;
+        }
+        .navbar-dark .navbar-nav .nav-link:hover {
+            color: #ffffff !important;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">Employee Management System</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/login}">Employee Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/admin}">Admin Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-4"> Employee Management System</h1>
+        <p class="lead">Streamline your workforce management with our powerful tools.</p>
+<!--        <a class="btn btn-primary btn-lg" th:href="@{/learn_more}" role="button">Learn more</a>-->
+        <a class="btn btn-warning btn-lg" th:href="@{/learn_more}" role="button">Learn more</a>
+
+    </div>
+</div>
+
+<footer class="footer mt-auto py-3 bg-dark text-white">
+    <div class="container text-center">
+        <span>&copy; 2024 Employee Management System<small> by rossypotentials</small></span>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-yaFAFgaU7kj/UVtN7xG4lGF4JprPpSb1ggdbTtV2LI+eWw70EMk7UsURPyfYsOAf"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shCk5KVYFfF5eNvadVpsp+6h2rtF5+JaeuBHo"
+        crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Application Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <h2 class="mt-4">Leave Application Form</h2>
+    <form th:action="@{/leave/form}" method="post">
+        <div class="form-group">
+            <label for="id">Employee ID:</label>
+            <input type="number" class="form-control" id="id" name="id" required>
+        </div><div class="form-group">
+            <label for="startLeave">Start Date and Time:</label>
+            <input type="datetime-local" class="form-control" id="startLeave" name="startLeave" required>
+        </div>
+        <div class="form-group">
+            <label for="endLeave">End Date and Time:</label>
+            <input type="datetime-local" class="form-control" id="endLeave" name="endLeave" required>
+        </div>
+        <div class="form-group">
+            <label for="leaveType">Leave Type:</label>
+            <select class="form-control" id="leaveType" name="leaveType" required>
+                <option value="ANNUAL_LEAVE">ANNUAL_LEAVE</option>
+                <option value="SICK_LEAVE">SICK_LEAVE</option>
+                <option value="MATERNITY_LEAVE">MATERNITY_LEAVE</option>
+                <option value="FAMILY_EMERGENCY_LEAVE">FAMILY_EMERGENCY_LEAVE</option>
+            </select>
+        </div>
+        <!-- Add more form fields if needed -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+</body>
+</html>
